@@ -10,3 +10,5 @@ python3 verilogAutoPrefix.py "$(VERILOG_SRC_DIR)" "$(PREFIX)" "$(IGNORE_NAME)"
 # for ysyx project:
 python3 verilogAutoPrefix.py "$(VERILOG_SRC_DIR)" "$(STUID)_" "$(STUID)"
 ```
+
+![screenshot](https://raw.githubusercontent.com/MrAMS/verilogModuleAddPrefix/main/screenshot.png)
