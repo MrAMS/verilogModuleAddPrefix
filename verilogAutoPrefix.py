@@ -20,12 +20,13 @@ def main(directory, prefix, ignoremodule):
     module_names = []
     for i in range(len(collections)):
         cur_module_names = re.findall(r'\bmodule\s+(\w+)', collections[i][1])
-        assert(len(cur_module_names)<=1, f"Found more than one module name in {collections[i][0]}")
         if len(cur_module_names)==0:
             continue
-        module_name = cur_module_names[0]
-        module_names.append(module_name)
-        collections[i][0] = collections[i][0].replace(module_name, prefix + module_name)
+        for module_name in cur_module_names:
+            module_name = cur_module_names[0]
+            module_names.append(module_name)
+            if module_name not in ignoremodule:
+                collections[i][0] = collections[i][0].replace(module_name, prefix + module_name)
 
     print(f"Found module names: {module_names}")
     for module_name in module_names:
