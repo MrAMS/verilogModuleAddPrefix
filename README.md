@@ -1,6 +1,6 @@
 # verilogModuleAddPrefix
 
-verilog/SystemVerilog module add prefix script 
+Add prefix to Verilog/SystemVerilog module names and update instances
 
 可用于ysyx项目添加学号
 
